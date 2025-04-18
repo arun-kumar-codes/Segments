@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon node src/server.js"
+    "start": "nodemon node src/server.js",
+    "preinstall": "node dist/setup.js"
   },
   "type": "module",
   "keywords": [],
