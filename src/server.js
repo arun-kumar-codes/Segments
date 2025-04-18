@@ -5,8 +5,8 @@ import segmentRoute from "./routes/segment.route.js"
 
 dotenv.config()
 const app = express()
-app.use(express.json())
-const port = process.env.PORT || 8080;
+app.use(cors());
+app.use(express.json());const port = process.env.PORT || 8080;
 
 app.use('/api/v1/segment', segmentRoute)
 app.get('/health/', (req, res) => {
