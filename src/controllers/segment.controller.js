@@ -119,8 +119,7 @@ export const getSegments = async (req, res) => {
 export const updateSegmentStatus = async (req, res) => {
     try {
         const { id } = req.query;
-        const IsActive = req.query.IsActive === 'false' ? false : true;
-
+        const IsActive = req.body.IsActive;
         if (typeof IsActive !== 'boolean') {
             return res.status(400).json({ success: false, message: 'IsActive must be a boolean' });
         }
