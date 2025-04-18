@@ -74,7 +74,6 @@ export const getSegments = async (req, res) => {
         const page = parseInt(req.query.page) || 1;
         const limit = parseInt(req.query.limit) || 10;
         const active = req.query.active === 'false' ? false : true;
-        console.log(active)
         const skip = (page - 1) * limit;
 
         const [segments, totalCount] = await Promise.all([
